@@ -14,6 +14,9 @@ info:
         version: '@info.app.version@'
         grailsVersion: '@info.app.grailsVersion@'
 spring:
+    jms:
+        cache:
+            enabled: false
     activemq:
         brokerUrl: tcp://localhost:61677
         inMemory: false
@@ -22,8 +25,8 @@ spring:
         # Message producers should always use the PooledConnectionFactory class. For more information, see
         # https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/connecting-to-amazon-mq.html#always-use-connection-pooling
         pool:
-            enabled: true
-            max-connections: 50
+            enabled: false
+#            max-connections: 50
     jmx:
         unique-names: true
     main:
