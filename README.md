@@ -21,3 +21,18 @@ and are referenced in the [application.yml](/grails-app/conf/application.yml) fi
 Once you have ActiveMQ running in a Docker container, run the Grails application in IntelliJ or in another terminal with:
 
     grails run-app
+
+
+# Notes:
+
+Removed the org.apache.activemq:activemq-spring build dependency because that includes `activemq-pool`,
+which is no longer supported in Spring Boot 2.1
+https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.1-Release-Notes#activemq-pooling
+
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-messaging
+
+https://github.com/spring-projects/spring-boot/issues/15998
+
+https://spring.io/guides/gs/messaging-jms/
+
